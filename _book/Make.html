@@ -1,0 +1,721 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Make · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Algorithm/Pack.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Algorithm/">
+            
+                <a href="Algorithm/">
+            
+                    
+                    Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Algorithm/BinarySearch.html">
+            
+                <a href="Algorithm/BinarySearch.html">
+            
+                    
+                    Binary Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Algorithm/Pack.md">
+            
+                <span>
+            
+                    
+                    Pack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="Make.html">
+            
+                <a href="Make.html">
+            
+                    
+                    Make
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Make</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="makefile">Makefile</h1>
+<p>1.makefile&#x7684;&#x4F7F;&#x7528;&#x4E0A;&#xFF0C;&#x529F;&#x80FD;&#x4E0D;&#x591A;&#xFF0C;&#x4E0D;&#x8DB3;&#x4EE5;&#x51FA;&#x4E00;&#x672C;&#x4E66;&#xFF0C;&#x76F4;&#x63A5;&#x770B;&#x6587;&#x6863;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x9700;&#x6C42;&#xFF0C;<a href="https://www.gnu.org/software/make/manual/make.html" target="_blank">https://www.gnu.org/software/make/manual/make.html</a> &#xFF0C;&#x8D81;&#x8FD9;&#x4E2A;&#x673A;&#x4F1A;&#x5B66;&#x7740;&#x975E;&#x5DE5;&#x5177;&#x4E66;&#x5F0F;&#x5730;&#x770B;&#x82F1;&#x6587;&#x6587;&#x6863;&#xFF0C;&#x7CFB;&#x7EDF;&#x5730;&#x5FEB;&#x901F;&#x8FC7;&#x4E00;&#x904D;&#x8FD9;&#x79CD;&#x80FD;&#x529B;&#x3002;&#xFF08;&#x53EA;&#x770B;&#x4E86;chapter1&#x548C;2<a href="https://www.gnu.org/software/make/manual/make.html#toc-An-Introduction-to-Makefiles" target="_blank">An Introduction to Makefiles</a>&#xFF0C;&#x4F5C;&#x4E3A;general introduction&#x5DF2;&#x7ECF;&#x591F;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x770B;chapter4 <strong>Writing Rules</strong>&#x91CC;&#x7684;&#x901A;&#x914D;&#x7B26;Wildcards&#x3001;&#x8DEF;&#x5F84;&#x68C0;&#x7D22;Directory Search&#x3001;&#x4F2A;&#x9020;&#x76EE;&#x6807;Phony Targets&#x3001;Multiple Targets&#x548C;Multiple Rules&#xFF0C;chapter7&#x7684;Conditional Parts of Makefiles&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#xFF09;</p>
+<p>2.&#x5C0F;&#x9879;&#x76EE;&#x7684;makefile&#x53EF;&#x4EE5;&#x624B;&#x5199;&#xFF0C;&#x5927;&#x9879;&#x76EE;&#x7684;&#x7528;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x751F;&#x6210;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x7406;&#x89E3;makefile&#x7ED3;&#x6784;&#xFF08;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x7528;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#x4EE3;&#x66FF;shell&#x91CC;&#x7684;gcc xxx&#x4E00;&#x7CFB;&#x5217;&#x547D;&#x4EE4;&#xFF09;&#x3002;</p>
+<p>3.cmake&#x3001;automake&#x7B49;&#x90FD;&#x662F;&#x7B80;&#x5316;&#x7684;&#x751F;&#x6210;makefile&#x7684;&#x5DE5;&#x5177;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x51E0;&#x4E4E;&#x90FD;&#x5728;&#x7FFB;&#x8BD1;&#x539F;&#x6587;&#x6863;&#x3002;<a href="https://www.gnu.org/software/make/manual/make.html" target="_blank">https://www.gnu.org/software/make/manual/make.html</a> &#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x6700;&#x540E;&#x53D1;&#x73B0;&#x72D7;&#x5C41;&#x4E0D;&#x901A;&#x3002;</p>
+<p>&#x6211;&#x5F53;&#x7136;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x7528;cmake&#x7BA1;&#x7406;&#x9879;&#x76EE;&#xFF0C;&#x4F46;&#x5E95;&#x5C42;&#x6700;&#x7EC8;&#x90FD;&#x662F;&#x7528;make&#xFF0C;&#x6211;&#x8BA4;&#x4E3A;&#x4E0D;&#x5B66;&#x4F1A;makefile&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x5C31;&#x4E0D;&#x80FD;&#x5B8C;&#x5168;&#x7406;&#x89E3;&#x5404;&#x79CD;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x3002;</p>
+<h3 id="doc-gnu-make">doc, GNU <code>make</code></h3>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6837;Makefile&#x91CC;&#x7684;&#x4E00;&#x4E2A;&#x529F;&#x80FD;block&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;Rule&#xFF0C;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x3002;</p>
+<h4 id="21-what-a-rule-looks-like">2.1 What a Rule Looks Like</h4>
+<pre><code class="lang-makefile">target &#x2026; : prerequisites &#x2026;&#xFF08;&#x524D;&#x63D0;&#xFF1B;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#xFF1B;&#x5FC5;&#x8981;&#x6761;&#x4EF6;&#xFF09;[pri&#x2C8;rekw&#x259;z&#x26A;t]
+        recipe&#xFF08;&#x65B9;&#x6CD5;&#xFF1B;&#x914D;&#x65B9;&#xFF1B;&#x8BC0;&#x7A8D;&#xFF09;[&#x2C8;res&#x259;pi]
+        &#x2026;
+        &#x2026;
+</code></pre>
+<p>target&#x901A;&#x5E38;&#x662F;&#x7A0B;&#x5E8F;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x6807;&#x6587;&#x4EF6;(object files)&#x3002;&#x4F46;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x8981;&#x5B9E;&#x65BD;carry out&#x7684;&#x67D0;&#x4E2A;&#x884C;&#x52A8;action&#xFF0C;&#x6BD4;&#x5982;clean&#xFF08;phony&#x5047;&#x7684;&#x3001;&#x4F2A;&#x9020;&#x7684;[&#x2C8;fo&#x28A;ni]  targets&#xFF09;&#x3002;</p>
+<p>prerequisites&#x662F;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x6765;&#x521B;&#x9020;target&#x7684;&#x90A3;&#x4E9B;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;target&#x901A;&#x5E38;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;&#x591A;&#x4E2A;prerequisites&#x6587;&#x4EF6;&#x3002;</p>
+<p>A recipe&#x662F;&#x4E00;&#x4E2A;make<strong>&#x8981;carry out&#x7684;action&#xFF08;&#x8981;&#x6267;&#x884C;&#x7684;&#x52A8;&#x4F5C;&#xFF09;</strong>&#xFF0C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;recipe&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x884C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x540C;&#x884C;&#xFF0C;&#x4F46;recipe&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x52A0;&#x4E00;&#x4E2A;tab&#xFF08;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;tab&#x957F;&#x5EA6;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x66FF;&#x6362;&#x6210;(4&#x4E2A;&#x6216;8&#x4E2A;)&#x7A7A;&#x683C;&#xFF09;&#xFF0C;.RECIPEPREFIX&#x53EF;&#x4EE5;&#x4FEE;&#x6539;prefix&#x4E0D;&#x4E3A;tab&#x3002;recipe&#x6240;&#x5728;&#x7684;rule&#x53EF;&#x4EE5;&#x6CA1;&#x6709;prerequisites&#xFF0C;&#x53EA;&#x6709;target&#xFF0C;&#x6BD4;&#x5982;&#x5305;&#x542B;&#x4E00;&#x7CFB;&#x5217;&#x5220;&#x9664;&#x547D;&#x4EE4;&#x7684;clean&#x5C31;&#x6CA1;&#x6709;prerequisites&#x3002;</p>
+<p>rule&#x89E3;&#x91CA;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x3001;&#x5982;&#x4F55;&#x751F;&#x6210;target files&#x3002;make&#x5C31;&#x5728;&#x6307;&#x5B9A;&#x7684;prerequisites&#x4E0A;&#x6267;&#x884C;recipe&#x6765;&#x521B;&#x5EFA;&#x548C;&#x66F4;&#x65B0;target files&#x3002;rule&#x4E5F;&#x4F1A;&#x89E3;&#x91CA;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x3001;&#x5982;&#x4F55;&#x6267;&#x884C;&#x4E00;&#x4E2A;action&#x3002;</p>
+<h4 id="22-a-simple-makefile">2.2 A Simple Makefile</h4>
+<p>&#x8FD8;&#x662F;&#x76F4;&#x63A5;&#x770B;&#x4F8B;&#x5B50;&#x5427;&#x3002;</p>
+<pre><code class="lang-makefile">edit : main.o kbd.o command.o display.o \
+       insert.o search.o files.o utils.o
+        cc -o edit main.o kbd.o command.o display.o \
+                   insert.o search.o files.o utils.o
+
+main.o : main.c defs.h
+        cc -c main.c
+kbd.o : kbd.c defs.h command.h
+        cc -c kbd.c
+command.o : command.c defs.h command.h
+        cc -c command.c
+display.o : display.c defs.h buffer.h
+        cc -c display.c
+insert.o : insert.c defs.h buffer.h
+        cc -c insert.c
+search.o : search.c defs.h buffer.h
+        cc -c search.c
+files.o : files.c defs.h buffer.h command.h
+        cc -c files.c
+utils.o : utils.c defs.h
+        cc -c utils.c
+clean :
+        rm edit main.o kbd.o command.o display.o \
+           insert.o search.o files.o utils.o
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x76F4;&#x63A5;&#x7684;(straightforward)makefile&#xFF0C;&#x63CF;&#x8FF0;&#x4E86;edit&#x8FD9;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x751F;&#x6210;&#x8FC7;&#x7A0B;&#xFF0C;&#x4F9D;&#x8D56;&#x4E8E;8&#x4E2A;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x516B;&#x4E2A;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x53C8;&#x4F9D;&#x6B21;(in turn)&#x4F9D;&#x8D56;&#x4E8E;8&#x4E2A;C&#x6E90;&#x6587;&#x4EF6;&#x548C;3&#x4E2A;&#x5934;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x6240;&#x6709;C&#x6587;&#x4EF6;&#x91CC;&#x90FD;&#x5F15;&#x5165;&#x4E86;defs.h&#xFF0C;&#x5B9A;&#x4E49;&#x7F16;&#x8F91;&#x547D;&#x4EE4;&#x7684;&#x51E0;&#x4E2A;C&#x6587;&#x4EF6;&#x5F15;&#x5165;&#x4E86;command.h&#xFF0C;&#x5E95;&#x5C42;&#x7684;&#x6539;&#x53D8;editor buffer&#x7F13;&#x51B2;&#x7684;C source&#x5F15;&#x5165;&#x4E86;buffer.h&#x3002;</p>
+<p>&#x8F93;&#x5165;make&#x5C31;&#x80FD;&#x751F;&#x6210;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;edit&#xFF0C;&#x8F93;&#x5165;make clean&#x5C31;&#x80FD;&#x8C03;&#x7528;&#x4E0A;&#x9762;&#x7684;clean&#x547D;&#x4EE4;&#x3002;</p>
+<p>recipe&#x662F;cc -c&#x548C;cc -o&#xFF0C;cc&#x5C31;&#x662F;gcc&#x7684;&#x7B80;&#x5199;&#xFF0C;GNU Compiler Collection GNU&#x7F16;&#x8BD1;&#x5668;&#x5957;&#x88C5;&#x3002;</p>
+<p>prefix tab(.RECIPEPREFIX)&#x5728;&#x6BCF;&#x4E00;&#x4E2A;recipe&#x524D;&#x662F;&#x7528;&#x6765;&#x533A;&#x5206;recipe&#x8DDF;&#x5176;&#x4ED6;&#x884C;&#x7684;&#x3002;</p>
+<p>&#x5173;&#x4E8E;rule&#x89E3;&#x91CA;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x751F;&#x6210;target files&#x548C;&#x6267;&#x884C;recipe&#x2014;&#x2014;<strong>&#x6267;&#x884C;make&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x53EA;&#x6709;&#x4FEE;&#x6539;&#x8FC7;&#x7684;prerequisites(&#x6216;&#x4E0D;&#x5B58;&#x5728;&#x7684;targets)&#x4F1A;&#x8FDB;&#x884C;recompile&#x548C;relink&#xFF0C;&#x800C;&#x90A3;&#x4E9B;&#x6CA1;&#x6709;&#x6539;&#x53D8;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x7528;&#x518D;&#x6B21;&#x751F;&#x6210;&#x3002;</strong></p>
+<p>clean&#x8FD9;&#x4E2A;target&#x4E0D;&#x662F;&#x6587;&#x4EF6;&#x53EA;&#x662F;&#x4E2A;action&#xFF0C;&#x56E0;&#x4E3A;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x60F3;&#x6267;&#x884C;clean&#xFF0C;&#x6240;&#x4EE5;clean&#x4E0D;&#x662F;&#x4EFB;&#x4F55;rule&#x7684;prerequisite&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x9664;&#x975E;&#x660E;&#x786E;&#x6307;&#x5B9A;&#xFF0C;make&#x4E0D;&#x4F1A;&#x6267;&#x884C;clean&#x3002;clean&#x6CA1;&#x6709;prerequisites&#x6240;&#x4EE5;&#x53EA;&#x662F;&#x7528;&#x6765;&#x6267;&#x884C;target&#x5BF9;&#x5E94;&#x7684;recipe&#xFF08;&#x8A00;&#x4E0B;&#x4E4B;&#x610F;&#x53EA;&#x6709;&#x6709;prerequisites&#x7684;rule&#x624D;&#x4F1A;&#x751F;&#x6210;&#x6587;&#x4EF6;&#xFF09;&#x3002;</p>
+<blockquote>
+<p>Targets that do not refer to files but are just actions are called <em>phony targets</em>.</p>
+</blockquote>
+<p>&#x4E0D;&#x6D89;&#x53CA;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x53EA;&#x6709;&#x6267;&#x884C;&#x52A8;&#x4F5C;&#x7684;targets&#x53EB;phony targets&#x3002;</p>
+<h4 id="23-how-make-processes-a-makefile">2.3 How <code>make</code> Processes a Makefile</h4>
+<p>make&#x548B;&#x5904;&#x7406;makefile&#x5462;&#xFF1F;</p>
+<p>default goal&#xFF08;&#x9ED8;&#x8BA4;&#x76EE;&#x6807;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x5730;&#xFF0C;make&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;target&#xFF08;&#x540D;&#x5B57;&#x4E0D;&#x4EE5;&apos;.&apos;&#x4E3A;&#x524D;&#x7F00;&#x7684;target&#xFF09;&#x5F00;&#x59CB;&#x3002;goals&#x5C31;&#x662F;make&#x5B9E;&#x9645;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x90A3;&#x4E9B;targets&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;.DEFAULT_GOAL&#x6539;&#x53D8;default goal&#xFF0C;&#x6216;&#x8005;&#x5728;&#x547D;&#x4EE4;&#x884C;make&#x53C2;&#x6570;&#x91CC;&#x63A7;&#x5236;&#x3002;</p>
+<p>&#x8FD9;&#x4E0B;&#x660E;&#x767D;&#x4E86;&#xFF0C;make -j4/-j6/-j8&#x90A3;&#x4E9B;&#xFF08;5.4 Parallel Execution&#xFF0C;--jobs&#xFF0C;&#x591A;&#x8FDB;&#x7A0B;&#xFF09;&#x90FD;&#x662F;&#x6309;&#x8FD9;&#x4E2A;default goal&#x6267;&#x884C;&#x7684;&#x3002;</p>
+<p>&#x8FD8;&#x662F;&#x4EE5;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;simple Makefile&#x4E3A;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#xFF08;&#x4E3B;&#x89C2;&#x4E0A;&#xFF09;&#x7684;default goal&#x5C31;&#x662F;&#x66F4;&#x65B0;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;edit&#xFF0C;&#x6240;&#x4EE5;&#x628A;&#x8FD9;&#x6761;rule&#x653E;&#x5728;&#x6700;&#x5F00;&#x59CB;&#x3002;</p>
+<p>&#x8FD0;&#x884C;<code>make</code>&#x4E4B;&#x540E;&#x3002;</p>
+<p>make&#x8BFB;&#x53D6;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;Makefile&#x5E76;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;rule&#x5F00;&#x59CB;&#x5904;&#x7406;&#xFF0C;&#x5728;simple Makefile&#x91CC;&#xFF0C;&#x7B2C;&#x4E00;&#x6761;rule&#x662F;&#x91CD;&#x94FE;&#x63A5;relink&#x76EE;&#x6807;edit&#xFF0C;&#x4F46;&#x662F;&#x5728;make&#x5B8C;&#x5168;&#x5904;&#x7406;&#x5B8C;edit&#x8FD9;&#x6761;rule&#x4E4B;&#x524D;&#xFF0C;make&#x5FC5;&#x987B;&#x5904;&#x7406;edit&#x4F9D;&#x8D56;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;prerequisites&#x91CC;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x6761;rule&#xFF0C;&#x8FD9;&#x4E9B;rule&#x90FD;&#x5728;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x4ED6;&#x4EEC;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x6BCF;&#x4E2A;.o&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x3002;&#x53EA;&#x6709;&#x5728;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x8005;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#x6BD4;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#x66F4;&#x665A;&#xFF08;&#x8FD1;&#xFF09;&#x65F6;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x91CD;&#x7F16;&#x8BD1;recompilation&#x7684;&#x8FD9;&#x4E9B;rule&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x89C4;&#x5219;rule&#x88AB;&#x5904;&#x7406;&#x53EA;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x7684;targets&#x5728;default goal&#x7684;prerequisite&#x91CC;&#x51FA;&#x73B0;&#x4E86;&#xFF0C;&#x5982;&#x679C;default goal&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x67D0;&#x6761;rule&#x7684;target&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x4F1A;&#x5904;&#x7406;&#x90A3;&#x6761;rule&#xFF0C;&#x9664;&#x975E;&#x5728;make&#x91CC;&#x7528;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E;make clean&#x7684;&#x6307;&#x4EE4;&#x6307;&#x5B9A;&#x4E86;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5728;&#x5904;&#x7406;&#x6BCF;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;make&#x8FD8;&#x662F;&#x4F1A;&#x8003;&#x8651;&#x66F4;&#x65B0;&#x4ED6;&#x4EEC;&#x7684;prerequisites&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x90A3;&#x4E9B;source files&#x548C;header files&#x3002;&#x4F46;&#x662F;&#x5728;Makefile&#x91CC;&#xFF0C;&#x8FD9;&#x4E9B;&#x6E90;&#x6587;&#x4EF6;&#x5934;&#x6587;&#x4EF6;&#x5E76;&#x4E0D;&#x662F;&#x4EFB;&#x4F55;rule&#x7684;target&#xFF0C;&#x6240;&#x4EE5;make&#x5C31;&#x4E0D;&#x4F1A;&#x5BF9;&#x8FD9;&#x4E9B;.c&#x548C;.h&#x6587;&#x4EF6;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x4E86;&#x3002;&#x4F46;&#x662F;&#xFF01;<strong>&#x5047;&#x5982;&#x6709;&#xFF0C;make&#x4F1A;&#x6309;&#x7167;&#x8FD9;&#x4E9B;&#x6E90;&#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x66F4;&#x65B0;&#x90A3;&#x4E9B;&#x7528;Bison&#x6216;Yacc&#x4E4B;&#x7C7B;&#x7684;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x3002;</strong></p>
+<p>&#x53EA;&#x6709;&#x5F53;edit&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x8005;&#x4EFB;&#x4F55;prerequisites&#x6BD4;&#x4ED6;&#x65B0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x5B8C;&#x4E0A;&#x9762;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#xFF0C;make&#x5F00;&#x59CB;&#x91CD;&#x94FE;&#x63A5;edit&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6539;&#x53D8;&#x4E86;command.h&#xFF0C;&#x4F1A;&#x91CD;&#x7F16;&#x8BD1;kbd.o&#xFF0C;command.o&#x548C;files.o&#xFF0C;&#x7136;&#x540E;&#x94FE;&#x63A5;edit&#x3002;</p>
+<h4 id="24-variables-make-makefiles-simpler">2.4 Variables Make Makefiles Simpler</h4>
+<p>main.o kbd.o command.o display.o insert.o search.o files.o utils.o&#x8FD9;&#x79CD;&#x957F;&#x4E32;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#xFF0C;&#x4E00;&#x822C;&#x9700;&#x8981;&#x7528;&#x53D8;&#x91CF;&#x3002;&#x7528;&#x6CD5;&#x662F;&#xFF0C;&apos;=&apos;&#x5B9A;&#x4E49;&#x5B8C;&#x7528;$()&#x8C03;&#x7528;&#x3002;</p>
+<pre><code class="lang-makefile">objects = main.o kbd.o command.o display.o \
+          insert.o search.o files.o utils.o
+
+edit : $(objects)
+        cc -o edit $(objects)
+main.o : main.c defs.h
+        cc -c main.c
+kbd.o : kbd.c defs.h command.h
+        cc -c kbd.c
+command.o : command.c defs.h command.h
+        cc -c command.c
+display.o : display.c defs.h buffer.h
+        cc -c display.c
+insert.o : insert.c defs.h buffer.h
+        cc -c insert.c
+search.o : search.c defs.h buffer.h
+        cc -c search.c
+files.o : files.c defs.h buffer.h command.h
+        cc -c files.c
+utils.o : utils.c defs.h
+        cc -c utils.c
+clean :
+        rm edit $(objects)
+</code></pre>
+<h4 id="25-letting-make-deduce&#x63A8;&#x65AD;&#xFF1B;&#x6F14;&#x7ECE;d&#x26A;&#x2C8;dus-the-recipes">2.5 Letting <code>make</code> Deduce(&#x63A8;&#x65AD;&#xFF1B;&#x6F14;&#x7ECE;)[d&#x26A;&#x2C8;dus] the Recipes</h4>
+<p>&#x8BE6;&#x7EC6;&#x6E05;&#x695A;&#x5730;&#x8BF4;&#x660E;spell out&#x7F16;&#x8BD1;&#x6E90;&#x6587;&#x4EF6;&#x7684;recipes&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x3002;</p>
+<pre><code class="lang-makefile">objects = main.o kbd.o command.o display.o \
+          insert.o search.o files.o utils.o
+
+edit : $(objects)
+        cc -o edit $(objects)
+
+main.o : defs.h
+kbd.o : defs.h command.h
+command.o : defs.h command.h
+display.o : defs.h buffer.h
+insert.o : defs.h buffer.h
+search.o : defs.h buffer.h
+files.o : defs.h buffer.h command.h
+utils.o : defs.h
+
+.PHONY : clean
+clean :
+        rm edit $(objects)
+</code></pre>
+<p>&#x6709;&#x4E2A;&#x9690;&#x5F0F;implicit[&#x26A;m&#x2C8;pl&#x26A;s&#x26A;t]&#x89C4;&#x5219;&#x662F;&#xFF0C;&#x66F4;&#x65B0;&#x4E00;&#x4E2A;.o&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;make&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x8054;&#x540C;&#x540D;&#x7684;.c&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x7528;cc -c&#x547D;&#x4EE4;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7701;&#x7565;&#x3002;</p>
+<p>&#x6BD4;&#x5982;recipe &#x2018;cc -c main.c -o main.o&#x2019; to compile main.c into main.o&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;omit [o&#x28A;&#x2C8;m&#x26A;t]&#x5FFD;&#x7565;&#x6389;&#x53EA;&#x5199;main.o&#x3002;</p>
+<h4 id="26-another-style-of-makefile">2.6 Another Style of Makefile</h4>
+<p>&#x5982;&#x679C;&#x7528;&#x4E0A;&#x9762;&#x7684;&#x9690;&#x5F0F;&#x89C4;&#x5219;&#x5199;makefile&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x901A;&#x8FC7;prerequisites&#x800C;&#x4E0D;&#x662F;targets&#x7EC4;&#x7EC7;&#x7684;&#x5F62;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-makefile">objects = main.o kbd.o command.o display.o \
+          insert.o search.o files.o utils.o
+
+edit : $(objects)
+        cc -o edit $(objects)
+
+$(objects) : defs.h
+kbd.o command.o files.o : command.h
+display.o insert.o search.o files.o : buffer.h
+</code></pre>
+<p>&#x6240;&#x6709;&#x6E90;&#x6587;&#x4EF6;&#x90FD;&#x7528;&#x4E86;defs.h&#xFF0C;&#x4E2A;&#x522B;&#x6587;&#x4EF6;&#x7528;&#x4E86;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x91CD;&#x590D;&#x5B9A;&#x4E49;targets&#x6765;&#x5305;&#x542B;&#x6240;&#x6709;&#x7684;prerequisites&#xFF0C;&#x6309;prerequisites&#x6765;&#x7EC4;&#x7EC7;&#xFF0C;&#x4F46;&#x662F;&#x4E66;&#x5199;&#x987A;&#x5E8F;&#x4E0D;&#x53D8;&#xFF0C;&#x591A;&#x4E2A;targets&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;prerequisites&#x3002;</p>
+<p>&#x54EA;&#x79CD;&#x66F4;&#x597D;&#x89C1;&#x4EC1;&#x89C1;&#x667A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5199;&#x8D77;&#x6765;&#x7D27;&#x51D1;&#x4F46;&#x4E0D;&#x6E05;&#x6670;&#xFF0C;&#x4E0D;&#x90A3;&#x4E48;&#x597D;&#x8BFB;&#x3002;</p>
+<h4 id="33-including-other-makefiles">3.3 Including Other Makefiles</h4>
+<p>include&#x6307;&#x4EE4;(directive[d<strong>a&#x26A;</strong>&#x2C8;rekt&#x26A;v])&#x6307;&#x793A;&#x7B26;&#x544A;&#x8BC9;make&#x6682;&#x505C;(suspend[s&#x259;&#x2C8;spend])&#x6302;&#x8D77;&#x8BFB;&#x53D6;&#x5F53;&#x524D;&#x7684;makefile&#xFF0C;&#x8F6C;&#x800C;&#x5148;&#x884C;&#x8BFB;&#x53D6;include&#x6307;&#x5B9A;&#x7684;makefiles&#x3002;</p>
+<pre><code class="lang-makefile">include filenames&#x2026;
+</code></pre>
+<p>&#x884C;&#x5C3E;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;#&#x6CE8;&#x91CA;&#xFF0C;&#x524D;&#x7F00;&#x6216;&#x8005;&#x8BF4;&#x884C;&#x9996;&#x4E0D;&#x80FD;&#x662F;tab&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x88AB;&#x89C6;&#x4E3A;recipe&#x3002;&#x53E6;&#x5916;&#xFF0C;filenames&#x91CC;&#x5982;&#x679C;&#x6709;$()&#x53D8;&#x91CF;&#x6216;&#x8005;&#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x6269;&#x5C55;&#x3002;</p>
+<p>&#x5047;&#x5982;&#x73B0;&#x5728;&#x6709;&#x8FD9;&#x6837;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x8981;&#x5F15;&#x5165;&#xFF0C;&#x6709;foo&#xFF0C;a.mk, b.mk, and c.mk, and <code>$(bar)</code> expands to <code>bish bash</code>&#xFF0C;</p>
+<pre><code class="lang-makefile">include foo *.mk $(bar)
+is equivalent to
+include foo a.mk b.mk c.mk bish bash
+</code></pre>
+<p>&#x4E00;&#x79CD;&#x9700;&#x8981;&#x7528;include&#x7684;&#x60C5;&#x5F62;occasion&#x662F;&#x6709;&#x5F88;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5206;&#x522B;&#x88AB;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;&#x72EC;&#x7ACB;&#x7684;makefiles&#x8D1F;&#x8D23;&#x5904;&#x7406;&#xFF0C;&#x4ED6;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x7528;&#x7684;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x7684;&#x96C6;&#x5408;&#x6216;&#x8005;pattern&#x6A21;&#x5F0F;&#x89C4;&#x5219;&#xFF08;&#x5171;&#x7528;&#x90E8;&#x5206;&#x7528;include&#x5F15;&#x5165;&#xFF09;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x60C5;&#x5F62;&#x662F;&#xFF0C;&#x60F3;&#x4ECE;&#x6E90;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x751F;&#x6210;prerequisites&#x7684;&#x65F6;&#x5019;&#xFF0C;prerequisites&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x4E3B;&#x8981;&#x7684;makefile&#x628A;&#x4ED6;&#x5F15;&#x5165;&#x3002;&#x8FD9;&#x79CD;&#x5B9E;&#x8DF5;&#x901A;&#x5E38;&#x6BD4;&#x628A;prerequisites&#x9644;&#x52A0;&#x5728;makefile&#x672B;&#x5C3E;&#x7B80;&#x6D01;&#x3002;&#x8FD9;&#x91CC;&#x6CA1;&#x61C2;&#xFF0C;&#x4E5F;&#x6CA1;&#x7EE7;&#x7EED;&#x8BFB;chapter4&#x7684;&#x5BF9;&#x5E94;&#x90E8;&#x5206;&#xFF0C;<a href="https://www.gnu.org/software/make/manual/make.html#Automatic-Prerequisites&#x3002;" target="_blank">https://www.gnu.org/software/make/manual/make.html#Automatic-Prerequisites&#x3002;</a></p>
+<p>make&#x9996;&#x5148;&#x4F1A;&#x5728;include&#x7684;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x627E;included makefiles&#xFF0C;&#x7136;&#x540E;&#x4F1A;&#x5728;&#x2018;-I&#x2019; or &#x2018;--include-dir&#x2019;&#x6307;&#x5B9A;&#x7684;&#x8DEF;&#x5F84;&#x91CC;&#x627E;&#xFF0C;&#x6700;&#x540E;&#x4F1A;&#x4ECE;prefix/include (normally /usr/local/include <a href="https://www.gnu.org/software/make/manual/make.html#FOOT1" target="_blank">1</a>) /usr/gnu/include, /usr/local/include, /usr/include.&#x91CC;&#x9762;&#x627E;&#x3002;</p>
+<h5 id="&#x8FD9;&#x91CC;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x53C2;&#x89C1;summary-of-options&#xFF0C;&#x8FD9;&#x91CC;&#x7684;-i-or---include-dir&#x662F;make&#x7684;&#x53C2;&#x6570;&#x800C;&#x4E0D;&#x662F;gcc&#x7684;&#xFF0C;&#x8DDF;cxxflags&#x7B80;&#x8BB0;&#x91CC;&#x7684;&#x533A;&#x5206;&#x5F00;&#xFF0C;&#x53E6;&#x5916;&#x8FD9;&#x91CC;&#x5F15;&#x5165;&#x7684;&#x65E0;&#x8BBA;&#x4EC0;&#x4E48;&#x540E;&#x7F00;&#x90FD;&#x662F;makefile&#x3002;">&#x8FD9;&#x91CC;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x53C2;&#x89C1;<a href="https://www.gnu.org/software/make/manual/make.html#Options-Summary" target="_blank">Summary of Options</a>&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x2018;-I&#x2019; or &#x2018;--include-dir&#x2019;&#x662F;make&#x7684;&#x53C2;&#x6570;&#x800C;&#x4E0D;&#x662F;gcc&#x7684;&#xFF0C;&#x8DDF;CXXFLAGS&#x7B80;&#x8BB0;&#x91CC;&#x7684;&#x533A;&#x5206;&#x5F00;&#xFF0C;&#x53E6;&#x5916;&#x8FD9;&#x91CC;&#x5F15;&#x5165;&#x7684;&#x65E0;&#x8BBA;&#x4EC0;&#x4E48;&#x540E;&#x7F00;&#x90FD;&#x662F;makefile&#x3002;</h5>
+<p>&#x5982;&#x679C;&#x5F15;&#x5165;&#x7684;makefile&#x5728;&#x4E0A;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#x91CC;&#x627E;&#x4E0D;&#x5230;&#xFF0C;make&#x9996;&#x5148;&#x4F1A;&#x7ED9;&#x4E00;&#x4E2A;warning&#xFF0C;&#x4F1A;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x6574;&#x4E2A;makefile&#xFF0C;&#x5C1D;&#x8BD5;remake&#x8FD9;&#x4E2A;makefile&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x627E;&#x4E0D;&#x5230;&#x5C31;&#x62A5;fatal error&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5C31;&#x7B97;include&#x627E;&#x4E0D;&#x5230;&#x67D0;&#x4E9B;makefile&#x4E5F;&#x4E0D;&#x60F3;&#x8BA9;&#x4ED6;&#x62A5;&#x9519;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x7528;-include&#x6216;sinclude&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF0C;&#x9664;&#x4E86;-include&#x627E;&#x4E0D;&#x5230;makefile&#x751A;&#x81F3;makefile&#x7684;prerequisites&#x7684;&#x65F6;&#x5019;&#x90FD;&#x5B8C;&#x5168;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<h4 id="4-writing-rules">4 Writing Rules</h4>
+<h5 id="92-arguments-to-specify-the-goals">9.2 Arguments to Specify the Goals</h5>
+<p>goals&#x662F;make&#x6700;&#x7EC8;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x90A3;&#x4E9B;targets&#x3002;&#x5176;&#x4ED6;targets&#x53EA;&#x6709;&#x51FA;&#x73B0;&#x5728;prerequisites&#x91CC;&#x624D;&#x4F1A;&#x66F4;&#x65B0;&#x3002;</p>
+<p>&#x89C4;&#x5219;&#x7684;&#x987A;&#x5E8F;&#x4E0D;&#x91CD;&#x8981;&#xFF0C;&#x4E0A;&#x9762;&#x8BF4;&#x4E86;&#xFF0C;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x662F;&#x4EE5;&apos;.&apos;&#x4E3A;&#x524D;&#x7F00;&#x7684;target&#x5F00;&#x59CB;&#xFF0C;&#x4EE5;&apos;.&apos;&#x4E3A;&#x524D;&#x7F00;&#x5982;&#x679C;target&#x91CC;&#x6709;&apos;/&apos;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;default goal&#x3002;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x6761;rule&#x91CC;&#x9762;&#x6709;&#x591A;&#x4E2A;targets&#xFF0C;&#x90A3;&#x5C31;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x4E2A;target&#x4F5C;&#x4E3A;default&#xFF0C;.DEFAULT_GOAL&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x9009;&#x62E9;default goal&#x7684;&#x89C4;&#x5219;&#x3002;</p>
+<p>&#x6216;&#x8005;&#x5728;make&#x7684;&#x53C2;&#x6570;&#x91CC;&#x6307;&#x5B9A;&#xFF0C;&#x6BD4;&#x5982;make clean&#xFF0C;make edit&#xFF0C;make&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x6328;&#x4E2A;&#x5904;&#x7406;&#x8FD9;&#x4E9B;goals&#x3002;</p>
+<p><strong>&#x9664;&#x975E;&#x4EE5;&apos;-&apos;&#x524D;&#x7F00;&#x5F00;&#x59CB;&#x6216;&#x8005;&#x5305;&#x542B;&apos;=&apos;</strong>&#xFF0C;makefile&#x7684;&#x4EFB;&#x4F55;target&#x90FD;&#x53EF;&#x80FD;&#x662F;goal&#xFF0C;&#x751A;&#x81F3;&#x4E0D;&#x5728;makefile&#x91CC;&#x7684;target&#xFF0C;&#x5982;&#x679C;&#x6709;&#x9690;&#x5F0F;&#x89C4;&#x5219;make&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;goal&#x3002;</p>
+<p>make&#x53C2;&#x6570;&#x91CC;&#x6307;&#x5B9A;&#x7684;goals&#x4F1A;&#x88AB;&#x5B58;&#x5728;MAKECMDGOALS&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;variable&#x91CC;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E0D;&#x5230;&#x3002;</p>
+<pre><code class="lang-makefile">sources = foo.c bar.c
+
+ifneq ($(MAKECMDGOALS),clean)
+include $(sources:.c=.d)
+endif
+</code></pre>
+<p>$(sources:.c=.d)&#x8FD9;&#x4E2A;&#x8BED;&#x6CD5;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;sources&#x53D8;&#x91CF;&#x6240;&#x6709;.c&#x66FF;&#x6362;&#x6210;.d&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;condition&#x8BED;&#x53E5;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x5F53;&#x6267;&#x884C;clean rules&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x8981;&#x5F15;&#x5165;.d&#x7684;makefile&#x4E86;&#xFF0C;&#x7528;&#x4E0D;&#x4E0A;&#x3002;&#x8FD9;&#x4E2A;&#x8FD8;&#x633A;&#x6709;&#x7528;&#x7684;&#x3002;&#xFF08;include&#x6309;&#x987A;&#x5E8F;&#x8F7D;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x6700;&#x5148;&#x8F7D;&#x5165;&#x7684;.d makefile&#x4E2D;&#x7684;&#x76EE;&#x6807;&#x4F1A;&#x6210;&#x4E3A;&#x9ED8;&#x8BA4;&#x76EE;&#x6807;&#x3002;&#xFF09;</p>
+<p>&#x6307;&#x5B9A;goal&#x7684;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x662F;&#xFF0C;&#x53EA;&#x60F3;&#x7F16;&#x8BD1;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x6216;&#x8005;&#x53EA;&#x60F3;&#x7F16;&#x8BD1;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x3002;</p>
+<pre><code class="lang-makefile"><span class="hljs-meta"><span class="hljs-meta-keyword">.PHONY</span>: all</span>
+all: size nm ld ar as
+</code></pre>
+<p>&#x6BD4;&#x5982;&#x5047;&#x5982;&#x53EA;&#x60F3;&#x7528;&#x4E0A;&#x9762;&#x7684;size&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;make size&#xFF0C;&#x53EA;&#x6709;size&#x8FD9;&#x6761;rule&#x5BF9;&#x5E94;&#x7684;&#x7A0B;&#x5E8F;&#x4F1A;&#x88AB;&#x91CD;&#x7F16;&#x8BD1;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;goal&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x662F;&#xFF0C;make&#x4E00;&#x4E9B;&#x4E0D;&#x5E38;&#x7528;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;debugging output&#x7528;&#x7684;&#xFF0C;&#x6216;&#x8005;testing&#x4F7F;&#x7528;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E9B;&#x5728;makefile&#x91CC;&#x5199;&#x4E86;&#x4F46;&#x5E76;&#x4E0D;&#x662F;default goal&#x7684;prerequisites&#x3002;</p>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;goal&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x5C31;&#x662F;&#x6267;&#x884C;&#x5173;&#x8054;&#x7740;phony target&#x6216;&#x8005;empty target&#x7684;recipe&#xFF0C;&#x6BD4;&#x5982;ma ke clean&#xFF0C;&#x5F88;&#x591A;makefiles&#x90FD;&#x6709;clean&#x8FD9;&#x4E2A;phony target&#xFF0C;&#x53EA;&#x6709;&#x4F60;&#x663E;&#x5F0F;&#x6307;&#x5B9A;make xxx&#x624D;&#x4F1A;&#x6267;&#x884C;&#x8FD9;&#x4E9B;phony target&#x3002;</p>
+<h5 id="166-standard-targets-for-users">16.6 <a href="https://www.gnu.org/software/make/manual/make.html#Standard-Targets" target="_blank">Standard Targets for Users</a></h5>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E9B;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x6307;&#x5B9A;goal&#x7684;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x5F97;&#x5230;&#x7684;targets&#x3002;</p>
+<blockquote>
+<p>All GNU programs should have the following targets in their Makefiles:</p>
+</blockquote>
+<h6 id="all">all</h6>
+<p>Compile the entire program. This should be the default target.</p>
+<p>&#x8FD9;&#x4E2A;&#x4E0D;&#x662F;&#x5929;&#x7136;&#x7684;&#x9ED8;&#x8BA4;&#x76EE;&#x6807;&#xFF0C;&#x4E00;&#x822C;&#x8981;&#x628A;all&#x653E;&#x5728;&#x5F00;&#x5934;&#xFF08;includes&#x3001;conditional part&#x548C;variables&#x4E4B;&#x540E;&#xFF09;&#x3002;</p>
+<h6 id="clean&#xFF0C;mostlyclean&#xFF0C;distclean&#xFF0C;realclean&#xFF0C;clobber">clean&#xFF0C;mostlyclean&#xFF0C;distclean&#xFF0C;realclean&#xFF0C;clobber</h6>
+<h6 id="install">install</h6>
+<p>Copy the executable file into a directory that users typically search for commands; copy any auxiliary(&#x8F85;&#x52A9;&#x7684;) files that the executable uses into the directories where it will look for them.</p>
+<h6 id="print">print</h6>
+<p>Print listings of the source files that have changed.</p>
+<h6 id="tar">tar</h6>
+<p>Create a tar file of the source files.</p>
+<h6 id="shar">shar</h6>
+<p>Create a shell archive (shar file) of the source files.</p>
+<h6 id="dist">dist</h6>
+<p>Create a distribution file of the source files. This might be a tar file, or a shar file, or a compressed version of one of the above, or even more than one of the above.</p>
+<h6 id="tags&#xFF0C;check&#xFF0C;test">TAGS&#xFF0C;check&#xFF0C;test</h6>
+<h4 id="44-using-wildcard-characters-in-file-names">4.4 Using Wildcard Characters in File Names</h4>
+<p>make&#x91CC;&#x7684;&#x901A;&#x914D;&#x7B26;&#x53EF;&#x4EE5;&#x662F;<strong>*&#xFF0C;?&#xFF0C;[...]</strong>&#xFF0C;&#x8DDF;&#x6B63;&#x5219;&#x50CF;&#x3002;&#xFF5E;&#x5982;&#x679C;&#x5355;&#x72EC;&#x51FA;&#x73B0;&#x6216;&#x8005;&#x8DDF;&#x7740;&#x4E00;&#x4E2A;slash /&#x5C31;&#x4EE3;&#x8868;home&#x8DEF;&#x5F84;&#xFF0C;&#xFF5E;&#x4EE3;&#x8868;/home/you&#x3002;&#x5982;&#x679C;&#xFF5E;&#x8DDF;&#x7740;&#x8BCD;&#xFF0C;&#x6BD4;&#x5982;~might/bin&#xFF0C;&#x4EE3;&#x8868;&#x7528;&#x6237;&#x540D;&#x662F;&#x8FD9;&#x4E2A;&#x8BCD;&#xFF0C;&#x6269;&#x5C55;&#x4E3A;/home/might/bin&#x3002;&#x5982;&#x679C;&#x662F;MS-DOS or MS-Windows&#x8FD9;&#x79CD;&#x6CA1;&#x6709;home&#x8DEF;&#x5F84;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;HOME&#x6A21;&#x62DF;&#x3002;</p>
+<p>&#x5728;recipes&#x91CC;&#xFF0C;shell&#x8D1F;&#x8D23;wildcard expansion&#x901A;&#x914D;&#x7B26;&#x6269;&#x5C55;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x73AF;&#x5883;&#x91CC;&#xFF0C;&#x6BD4;&#x5982;makefile&#x91CC;&#xFF0C;&#x901A;&#x914D;&#x7B26;&#x6269;&#x5C55;&#x53EA;&#x6709;&#x5728;&#x4F7F;&#x7528;wildcard&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x53D1;&#x751F;&#x3002;&#xFF08;&#x4E0B;&#x9762;&#x7684;target-pattern&#x3001;prereq-pattern&#x3001;automatic variables&#x4E0D;&#x7B97;&#x4ED6;&#x8BF4;&#x7684;&#x901A;&#x914D;&#x7B26;&#x6269;&#x5C55;&#xFF0C;&#x8FD9;&#x91CC;&#x8BF4;&#x7684;&#x662F;&#x65E0;&#x9650;&#x5236;&#x7684;&#x3001;&#x968F;&#x65F6;&#x7528;&#x7684;&#xFF09;</p>
+<h4 id="441-wildcard-examples">4.4.1 Wildcard Examples</h4>
+<p>&#x901A;&#x914D;&#x7B26;&#x53EF;&#x4EE5;&#x7528;&#x5728;recipe&#x91CC;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;</p>
+<pre><code class="lang-makefile"><span class="hljs-section">clean:</span>
+        rm -f *.o
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5728;prerequisites&#x91CC;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;</p>
+<pre><code class="lang-makefile">print: *.c
+        lpr -p $?
+        touch print
+</code></pre>
+<p>make print&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x6240;&#x6709;&#x6539;&#x53D8;&#x4E86;&#x7684;.c&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x662F;emoty target&#xFF0C;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;print&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E2A;rule&#x76EE;&#x7684;&#x662F;&#x83B7;&#x53D6;&#x4EFB;&#x4F55;&#x65B0;&#x4E8E;print&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x7528;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;</p>
+<pre><code class="lang-makefile">objects = *.o
+</code></pre>
+<p>objects&#x5C31;&#x4F1A;&#x53D8;&#x6210;&apos;*.o&apos;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F46;&#x662F;&#x5728;target, prerequisite, recipe&#x91CC;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x7684;objects&#xFF0C;&#x8FD9;&#x4E2A;*&#x4E5F;&#x4F1A;&#x4F5C;&#x4E3A;&#x901A;&#x914D;&#x7B26;&#x88AB;&#x6269;&#x5C55;&#x3002;</p>
+<pre><code class="lang-makefile">objects := <span class="hljs-variable">$(wildcard *.o)</span>
+</code></pre>
+<p>&#x7528;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x624D;&#x80FD;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x5339;&#x914D;&#x901A;&#x914D;&#x7B26;&#x7684;&#x6587;&#x4EF6;list&#x53D8;&#x91CF;objects&#x3002;</p>
+<h4 id="442-pitfalls-of-using-wildcards">4.4.2 Pitfalls of Using Wildcards</h4>
+<p>&#x73B0;&#x5728;&#x60F3;&#x5B9E;&#x73B0;&#xFF0C;&#x7528;&#x8DEF;&#x5F84;&#x4E0B;&#x6240;&#x6709;.o&#x6587;&#x4EF6;&#x751F;&#x6210;foo&#xFF0C;</p>
+<pre><code class="lang-makefile">objects = *.o
+
+foo : $(objects)
+        cc -o foo $(CFLAGS) $(objects)
+</code></pre>
+<p>&#x8DDF;&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x5230;&#x6240;&#x6709;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;.o&#xFF0C;&#x4F46;&#x8DDF;&#x6211;&#x7684;&#x76EE;&#x6807;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x56E0;&#x4E3A;&#x5728;recipe&#x91CC;&#x88AB;shell&#x8C03;&#x7528;&#x5230;&#x4E86;*.o&#xFF0C;prerequisites&#x5B9E;&#x9645;&#x4E0A;&#x662F;&apos;*.o&apos;&#xFF0C;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x5047;&#x5982;&#x8DEF;&#x5F84;&#x4E0B;&#x6240;&#x6709;&#x7684;.o&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x90FD;&#x88AB;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x4F1A;&#x62A5;&#x9519;&#x800C;&#x4E0D;&#x662F;&#x6839;&#x636E;prerequisite&#x4F5C;&#x4E3A;target&#x7684;rule&#x91CD;&#x65B0;&#x751F;&#x6210;.o&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x8FD8;&#x662F;&#x8981;&#x7528;wildcard function&#x3002;</p>
+<blockquote>
+<p>MS&#x4E0B;&#x9762;&#x8DEF;&#x5F84;&#x7528;\&#x5206;&#x5272;&#xFF0C;Unix&#x7528;/&#xFF0C;&#x6700;&#x597D;&#x7528;slash/&#x800C;&#x4E0D;&#x662F;backslash\&#x3002;</p>
+</blockquote>
+<h4 id="443-the-function-wildcard">4.4.3 The Function <code>wildcard</code></h4>
+<p>&#x8DDF;&#x4E0A;&#x9762;*.o&#x5339;&#x914D;&#x4E0D;&#x5230;&#x4E5F;&#x4F1A;&#x9010;&#x5B57;verbatim&#x4F7F;&#x7528;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;$(wildcard, pattern...)&#x5339;&#x914D;&#x4E0D;&#x5230;&#x5C31;&#x88AB;&#x5FFD;&#x7565;omitted&#x3002;</p>
+<pre><code class="lang-makefile">$(patsubst %.c,%.o,$(wildcard *.c))
+</code></pre>
+<p>&#x8DDF;&#x6700;&#x4E0B;&#x9762;8.1&#x7684;subst&#x4E00;&#x6837;&#xFF0C;para3&#x4E2D;&#x7684;&#x6240;&#x6709;para1&#x88AB;para2&#x66FF;&#x6362;&#x3002;&#x53EF;&#x4EE5;&#x628A;&#x8DEF;&#x5F84;&#x91CC;&#x6240;&#x6709;&#x7684;.c&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x53D8;&#x4E3A;.o&#x5B58;&#x5230;list&#x91CC;&#x3002;</p>
+<pre><code class="lang-makefile">objects := <span class="hljs-variable">$(patsubst %.c,%.o,$(wildcard *.c)</span>)
+
+foo : $(objects)
+        cc -o foo $(objects)
+</code></pre>
+<blockquote>
+<p>(This takes advantage of the implicit rule for compiling C programs, so there is no need to write explicit rules for compiling the files. See <a href="https://www.gnu.org/software/make/manual/make.html#Flavors" target="_blank">The Two Flavors of Variables</a>, for an explanation of &#x2018;:=&#x2019;, which is a variant of &#x2018;=&#x2019;.)</p>
+</blockquote>
+<p>&#x610F;&#x601D;&#x662F;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x4E5F;&#x80FD;&#x81EA;&#x52A8;&#x6309;&#x9690;&#x5F0F;&#x89C4;&#x5219;&#x7F16;&#x8BD1;&#x6240;&#x6709;.o&#x7684;&#x540C;&#x540D;.c&#x6E90;&#x6587;&#x4EF6;&#x3002;</p>
+<h4 id="45-searching-directories-for-prerequisites">4.5 Searching Directories for Prerequisites</h4>
+<p>vpath&#xFF0C;&#x53EF;&#x80FD;&#x7528;&#x5F97;&#x5230;&#xFF0C;&#x7528;&#x5230;&#x518D;&#x5B66;&#x3002;</p>
+<h4 id="46-phony-targets">4.6 Phony Targets</h4>
+<p>&#x4E00;&#x4E2A;phony target&#x662F;&#x975E;&#x6587;&#x4EF6;&#x540D;&#x7684;target&#xFF0C;rather&#x66F4;&#x786E;&#x5207;&#x5730;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x4E2A;&#x5F53;&#x4F60;&#x663E;&#x5F0F;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x7684;recipe&#x7684;&#x540D;&#x5B57;&#x3002;&#x6709;&#x4E24;&#x4E2A;&#x7528;phony&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x907F;&#x514D;&#x8FD9;&#x4E2A;recipe&#x7684;&#x540D;&#x5B57;&#x8DDF;&#x6587;&#x4EF6;&#x540D;&#x6709;&#x51B2;&#x7A81;&#xFF08;&#x6BD4;&#x5982;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x540D;&#x521A;&#x597D;&#x662F;&#x67D0;&#x4E2A;goal&#x76F8;&#x5173;&#x7684;prerequisite&#xFF09;&#xFF1B;&#x8FD8;&#x7528;&#x6765;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;</p>
+<pre><code class="lang-makefile"><span class="hljs-comment">#.PHONY: clean</span>
+<span class="hljs-section">clean:</span>
+        rm *.o temp
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x52A0;.PHONY&#xFF0C;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x53EB;clean&#x7684;&#x8BDD;&#xFF0C;clean&#x8FD9;&#x4E2A;target&#x5BF9;&#x5E94;&#x7684;recipe&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#x5230;&#xFF0C;&#x56E0;&#x4E3A;clean&#x6CA1;&#x6709;&#x4EFB;&#x4F55;prerequisites&#xFF0C;clean&#x8FD9;&#x4E2A;target&#x6C38;&#x8FDC;&#x4F1A;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;up to date&#x6700;&#x65B0;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;target .PHONY&#xFF0C;&#x8BA9;clean&#x8FD9;&#x4E2A;target&#x4F5C;&#x4E3A;.PHONY&#x7684;prerequisite&#xFF0C;&#x6307;&#x660E;&#x8FD9;&#x662F;&#x4E2A;&#x5047;&#x7684;target&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x65E0;&#x8BBA;&#x8DEF;&#x5F84;&#x4E0B;&#x6709;&#x6CA1;&#x6709;clean&#x6587;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x7528;make clean&#x6267;&#x884C;clean&#x8FD9;&#x4E2A;rule&#x4E86;&#x3002;</p>
+<p>Phony targets&#x5728;&#x8DDF;make&#x7ED3;&#x5408;&#x7684;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x65F6;&#x4E5F;&#x5F88;&#x6709;&#x7528;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x91CC;makefile&#x901A;&#x5E38;&#x6709;&#x4E00;&#x4E2A;&#x5B50;&#x8DEF;&#x5F84;&#x5217;&#x8868;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x65B9;&#x6CD5;&#x662F;&#x5B9A;&#x4E49;&#x4E00;&#x6761;rule&#xFF0C;&#x5728;recipe&#x91CC;&#x7528;&#x4E00;&#x4E2A;loop&#x5904;&#x7406;&#x6240;&#x6709;&#x7684;&#x5B50;&#x8DEF;&#x5F84;&#x3002;</p>
+<pre><code class="lang-makefile">SUBDIRS = foo bar baz
+
+<span class="hljs-section">subdirs:</span>
+        for dir in $(SUBDIRS); do \
+          $(MAKE) -C $$dir; \
+        done
+</code></pre>
+<p>$&#x5728;make&#x548C;shell&#x91CC;&#x7528;&#x6CD5;&#x90FD;&#x5F88;&#x4E30;&#x5BCC;&#x3002;</p>
+<p>$&#x5728;shell&#x91CC;&#x4E5F;&#x662F;&#x8C03;&#x7528;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x7528;&#x4E00;&#x4E2A;dollar$&#x7684;&#x8BDD;&#xFF0C;make&#x9884;&#x5904;&#x7406;&#x4F1A;&#x7528;makefile&#x91CC;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x53D6;&#x4EE3;$&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x7528;&#x4FE9;dollar$$&#x8C03;&#x7528;shell&#x91CC;&#x7684;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8FD9;&#x91CC;&#x8C03;&#x7528;&#x7684;&#x662F;shell&#x91CC;&#x7684;&#x53D8;&#x91CF;&#x800C;&#x4E0D;&#x662F;makefile&#x91CC;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF1F;&#x56E0;&#x4E3A;recipe&#x91CC;&#x7684;loop&#x5728;make&#x9884;&#x5904;&#x7406;&#x540E;&#x4F1A;&#x8F6C;&#x4E3A;shell&#x6307;&#x4EE4;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;dir&#x662F;&#x5728;shell&#x547D;&#x4EE4;&#x91CC;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x5230;&#x7684;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#x95EE;&#x9898;&#x3002;</p>
+<p>1.&#x4EFB;&#x4F55;&#x68C0;&#x6D4B;&#x51FA;&#x6765;&#x7684;error&#x90FD;&#x4F1A;&#x88AB;&#x8FD9;&#x6761;rule&#x5FFD;&#x7565;&#x3002;</p>
+<p>2.</p>
+<p>Phony targets&#x4E5F;&#x53EF;&#x4EE5;&#x6709;prerequisites&#x3002;</p>
+<h4 id="7-conditional-parts-of-makefiles">7 Conditional Parts of Makefiles</h4>
+<p>Conditional&#xFF0C;SyntaxTesting Flags&#x3002;&#x3002;&#x3002;</p>
+<p>Makefile&#x7684;&#x6761;&#x4EF6;&#x90E8;&#x5206;&#xFF0C;&#x6BD4;&#x5982;ifdef, ifeq&#xFF0C;&#xFF0C;endif&#x3002;</p>
+<p>&#x5047;&#x5982;&#x6709;xxx&#x7684;&#x5B9A;&#x4E49;&#x6216;&#x8005;&#x5047;&#x5982;&#x76F8;&#x7B49;&#x5C31;&#x6267;&#x884C;&#x67D0;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x6BD4;&#x5982;include $()&#xFF0C;&#x5904;&#x7406;Makefile&#x811A;&#x672C;&#x7684;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x76F8;&#x5BF9;&#x7B80;&#x5355;&#x3002;</p>
+<h4 id="10-using-implicit-rules">10 Using Implicit Rules</h4>
+<p>&#x8FB9;&#x7528;&#x8FB9;&#x8BB0;&#x5427;&#x3002;</p>
+<hr>
+<h3 id="syntax&#x76F8;&#x5173;&#xFF0C;&#x5F88;&#x91CD;&#x8981;">syntax&#x76F8;&#x5173;&#xFF0C;&#x5F88;&#x91CD;&#x8981;</h3>
+<h4 id="42-rule-syntax">4.2 <a href="https://www.gnu.org/software/make/manual/make.html#Rule-Syntax" target="_blank">Rule Syntax</a></h4>
+<pre><code class="lang-makefile">targets : prerequisites
+        recipe
+        &#x2026;
+targets : prerequisites ; recipe
+        recipe
+        &#x2026;
+</code></pre>
+<p>&#x901A;&#x5E38;&#x4E00;&#x6761;rule&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8FD9;&#x4E24;&#x79CD;&#x6837;&#x5B50;&#xFF0C;&#x56E0;&#x4E3A;dollar&#x7B26;&#x53F7;$&#x7528;&#x4E8E;&#x53D8;&#x91CF;&#x5F15;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;prerequisite&#x91CC;&#x7528;&#x5230;&#x4E86;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x8F6C;&#x4E49;&#x5199;&#x4E24;&#x4E2A;dollar&#x7B26;&#x53F7;$$&#x4EE3;&#x66FF;&#x4E00;&#x4E2A;&#x3002;</p>
+<p>&#x6700;&#x5F00;&#x59CB;&#x5305;&#x62EC;&#x4E0A;&#x6587;&#x4E2D;&#x63D0;&#x5230;&#x7684;&#xFF0C;&#x4E00;&#x6761;rule&#x4F1A;&#x89E3;&#x91CA;when&#x548C;how&#x66F4;&#x65B0;targets&#xFF0C;&#x8FD9;&#x91CC;&#x518D;&#x6B21;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#xFF0C;prerequisites&#x51B3;&#x5B9A;targets&#x662F;&#x5426;out of date&#x8FC7;&#x671F;&#x4E86;&#xFF0C;&#x5982;&#x679C;targets&#x6BD4;&#x4EFB;&#x4E00;prerequisites&#x66F4;&#x65E7;&#xFF0C;&#x5C31;&#x8981;&#x66F4;&#x65B0;&#xFF1B;&#x81F3;&#x4E8E;&#x5982;&#x4F55;&#x66F4;&#x65B0;targets&#x7531;recipe&#x51B3;&#x5B9A;&#xFF0C;recipe&#x5305;&#x542B;&#x591A;&#x6761;&#x5728;shell&#x91CC;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x3002;(see <a href="https://www.gnu.org/software/make/manual/make.html#Recipes" target="_blank">Writing Recipes in Rules</a>).</p>
+<h4 id="4121-syntax-of-static-pattern-rules&#xFF0C;&#x6700;&#x91CD;&#x8981;">4.12.1 <a href="https://www.gnu.org/software/make/manual/make.html#Static-Usage" target="_blank">Syntax of Static Pattern Rules</a>&#xFF0C;&#x6700;&#x91CD;&#x8981;</h4>
+<pre><code class="lang-makefile">targets &#x2026;: target-pattern: prereq-patterns &#x2026;
+        recipe
+        &#x2026;
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x662F;&#x9759;&#x6001;&#x6A21;&#x5F0F;&#x7684;rule&#xFF0C;targets&#x786E;&#x5B9A;rule&#x4F5C;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8DDF;&#x666E;&#x901A;&#x7684;rule&#x4E00;&#x6837;&#x53EF;&#x4EE5;&#x5305;&#x542B;wildcard&#x901A;&#x914D;&#x7B26;&#x3002;</p>
+<p>&#x6CE8;&#x610F;target-pattern&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;prereq-pattern<strong>s</strong>&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x3002;</p>
+<p>target-pattern&#x548C;prereq-pattern&#x8BF4;&#x660E;&#x600E;&#x4E48;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;target&#x7684;prerequisites&#xFF0C;&#x6BCF;&#x4E2A;target&#x8DDF;target-pattern&#x5339;&#x914D;&#x6765;&#x5F97;&#x5230;&#x4E00;&#x90E8;&#x5206;target name&#xFF0C;&#x53EB;&#x505A;stem&#xFF08;&#x6897;&#xFF1B;&#x830E;&#xFF1B;&#x5E72;&#xFF09;&#xFF0C;stem&#x88AB;&#x66FF;&#x4EE3;&#x8FDB;&#x6240;&#x6709;prereq-patterns&#x6765;&#x6784;&#x9020;prerequisite name&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;pattern&#x90FD;normally&#xFF08;&#x901A;&#x5E38;&#xFF1B;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF09;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;%&#xFF0C;&#x5F53;target-pattern&#x5339;&#x914D;&#x5230;&#x4E00;&#x4E2A;target&#x7684;&#x65F6;&#x5019;&#xFF0C;%&#x53EF;&#x4EE5;&#x5339;&#x914D;target name&#x7684;&#x4EFB;&#x610F;&#x90E8;&#x5206;&#xFF0C;&#x8FD9;&#x4E2A;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8BF4;&#x7684;STEM&#xFF0C;&#x800C;stem&#x4E4B;&#x5916;&#x5269;&#x4E0B;&#x7684;target name&#x7684;&#x90E8;&#x5206;&#x5FC5;&#x987B;&#x8DDF;target-pattern&#x5B8C;&#x5168;&#x5339;&#x914D;&#x3002;&#x6BCF;&#x4E2A;&#x76EE;&#x6807;&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x540D;&#x79F0;&#x662F;&#x901A;&#x8FC7;&#x7528;<strong>&#x8BCD;&#x5E72;</strong>stem&#x66FF;&#x6362;&#x6BCF;&#x4E2A;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x201C;%&#x201D;&#x6765;&#x751F;&#x6210;&#x7684;&#x3002;&#xFF08;&#x5F88;&#x597D;&#x7406;&#x89E3;&#xFF0C;<strong>&#x5C31;&#x662F;target-pattern&#x7528;&#x901A;&#x914D;&#x7B26;&#x63D0;&#x53D6;target name&#x91CC;&#x7684;&#x524D;&#x7F00;&#x4E4B;&#x7C7B;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x586B;&#x5145;&#x5230;prereq-pattern&#x4F5C;&#x4E3A;prerequisites&#x3002;</strong>&#xFF09;</p>
+<p>%&#x7684;&#x8F6C;&#x4E49;&#x7528;\&#xFF0C;backslashes&#x3002;</p>
+<pre><code class="lang-makefile">objects = foo.o bar.o
+
+all: $(objects)
+
+$(objects): %.o: %.c
+        $(CC) -c $(CFLAGS) $&lt; -o $@
+</code></pre>
+<p>&#x4EE5;&#x8FD9;&#x4E2A;&#x4E3A;&#x4F8B;&#xFF0C;&#x7528;&#x6240;&#x6709;&#x7684;&#x76F8;&#x5173;.c&#x6587;&#x4EF6;&#x5373;foo.c&#x548C;bar.c&#x7F16;&#x8BD1;&#x5F97;&#x5230;foo.o&#x548C;bar.o&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x7684;$&lt;&#x548C;&#x200B;$@&#x662F;automatic variable&#x81EA;&#x52A8;&#x53D8;&#x91CF;&#xFF0C;$&lt;&#x6307;prerequisite&#x540D;&#x5B57;&#x5373;%.c&#xFF0C;&#x200B;$@&#x6307;target&#x540D;&#x5B57;&#x5373;%.o&#x3002;(see <a href="https://www.gnu.org/software/make/manual/make.html#Automatic-Variables" target="_blank">Automatic Variables</a>.)</p>
+<p><u>&#x6CE8;&#x610F;</u>&#xFF0C;&#x8FD9;&#x91CC;<strong>&#x6BCF;&#x4E2A;targets&#x90FD;&#x5FC5;&#x987B;&#x80FD;&#x5339;&#x914D;&#x4E0A;target pattern&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5168;&#x90E8;&#x5339;&#x914D;&#xFF0C;&#x5C31;&#x8981;&#x7528;filter&#x51FD;&#x6570;</strong>&#xFF0C;&#x51FD;&#x6570;&#x76F8;&#x5173;&#x5728;&#x4E0B;&#x9762;chapter8&#x3002;</p>
+<p>filter&#x53EF;&#x4EE5;<strong>&#x6392;&#x9664;</strong>&#x6389;target&#x91CC;&#x4E0D;&#x5339;&#x914D;target-pattern&#x7684;target file names&#x3002;</p>
+<pre><code class="lang-makefile">files = foo.elc bar.o lose.o
+
+$(filter %.o,$(files)): %.o: %.c
+        $(CC) -c $(CFLAGS) $&lt; -o $@
+$(filter %.elc,$(files)): %.elc: %.el
+        emacs -f batch-byte-compile $&lt;
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;$(filter %.o,&#x200B;$(files))&#x7684;&#x7ED3;&#x679C;&#x662F;bar.o lose.o&#xFF0C;&#x7528;bar.c&#x548C;lose.c&#x7F16;&#x8BD1;&#x3002;&#x800C;$(filter %.elc,$(files))&#x7684;&#x7ED3;&#x679C;&#x662F;foo.elc&#xFF0C;&#x7531;foo.el&#x751F;&#x6210;&#x3002;</p>
+<pre><code class="lang-makefile">bigoutput littleoutput : %output : text.g
+        generate text.g -$* &gt; $@
+</code></pre>
+<p>%&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x51FA;big&#x548C;little&#xFF0C;&#x8FD9;&#x91CC;&#x7684;*&#x53EF;&#x4EE5;&#x586B;&#x5145;big&#x548C;little&#xFF0C;&#x5206;&#x522B;&#x751F;&#x6210;&#x5230;bigoutput&#x548C;littleoutput&#x91CC;&#x3002;</p>
+<p>&#x51E0;&#x4E2A;automatic variables&#x7684;&#x4E0D;&#x540C;&#x70B9;&#xFF0C;<strong>$@&#x548C;$&lt;&#x90FD;&#x662F;&#x53D6;&#x5168;&#x540D;&#xFF0C;&#x5206;&#x522B;&#x662F;target&#x548C;prerequisite&#xFF0C;&#x800C;$*&#x53EA;&#x53D6;%&#x901A;&#x914D;&#x7B26;&#x5339;&#x914D;&#x5230;&#x7684;&#x90E8;&#x5206;&#x3002;</strong></p>
+<p>&#x6CA1;&#x65F6;&#x95F4;&#x6574;&#x7406;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x76F4;&#x63A5;&#x67E5;&#x4E0B;&#x9762;&#x6587;&#x6863;&#x5427;&#x3002;</p>
+<h5 id="automatic-variables"><a href="https://www.gnu.org/software/make/manual/make.html#Automatic-Variables" target="_blank">Automatic Variables</a></h5>
+<hr>
+<pre><code class="lang-makefile">build/%.o: src/%.cpp
+    @mkdir -p $(@D)
+    $(CXX) $(INCPATH) $(CXXFLAGS) -MM -MT build/$*.o $&lt; &gt;build/$*.d
+    $(CXX) $(INCPATH) $(CXXFLAGS) -c $&lt; -o $@
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x662F;familia&#x7684;makefile&#xFF0C;&#x4F5C;&#x4E3A;example&#xFF0C;&#x8981;&#x628A;&#x4ED6;&#x5B66;&#x5230;&#x6211;&#x7684;&#x9879;&#x76EE;&#x91CC;&#x3002;</p>
+<p>build/%.o: src/%.cpp&#x8FD9;&#x4E2A;&#x5199;&#x6CD5;&#x6211;&#x731C;&#x662F;&#x5339;&#x914D;&#x6240;&#x6709;&#x4E0A;&#x9762;&#x7684;prerequisites&#xFF0C;&#x8FD9;&#x6837;&#x5199;&#x5408;&#x6CD5;&#xFF0C;&#x5B66;&#x5230;&#x4E86;&#x3002;</p>
+<p>&#x9996;&#x5148;$(@D)&#x8FD9;&#x4E2A;&#xFF0C;&#x5F00;&#x59CB;&#x4EE5;&#x4E3A;&#x662F;shell&#x7684;&#x8BED;&#x6CD5;&#xFF0C;recipe&#x4E0D;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x533A;&#x5206;&#xFF0C;for:$$var&#x90A3;&#x79CD;&#x5199;&#x6CD5;&#x53C8;&#x4F1A;&#x5230;shell&#x91CC;&#x6267;&#x884C;&#xFF0C;&#x603B;&#x4E4B;&#x67E5;&#x5230;&#x4E86;<a href="https://stackoverflow.com/questions/42646316/what-does-d-mean-in-shell-script" target="_blank">https://stackoverflow.com/questions/42646316/what-does-d-mean-in-shell-script</a> &#x3002;makefile&#x91CC;$@&#x6307;&#x7684;&#x662F;target name&#x4E5F;&#x5C31;&#x662F;build/%.o&#xFF0C;$(@D)&#x53D6;&#x7684;&#x662F;&#x524D;&#x9762;&#x7684;&#x8DEF;&#x5F84;build&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;slash/&#xFF0C;$(@D)&#x7684;&#x503C;&#x5C31;&#x662F;<code>.</code>&#x3002;</p>
+<p>&#x7136;&#x540E;&#x8FD9;&#x91CC;&#x7B2C;&#x4E8C;&#x53E5;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x6253;&#x5370;&#x6240;&#x6709;$&lt;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x628A;&#x76EE;&#x6807;&#x540D;&#x6539;&#x4E3A;build/%.o&#xFF0C;&#x5E76;&#x628A;&#x6267;&#x884C;&#x7ED3;&#x679C;&gt;&#x8F93;&#x51FA;&#x5230;build/$*.d&#x91CC;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x8FD9;&#x53E5;&#x5C31;&#x662F;&#x7F16;&#x8BD1;&#x4E86;&#x3002;</p>
+<pre><code class="lang-makefile">build/libfamilia.a: $(OBJS)
+    ar crv $@ $(filter %.o, $?)
+</code></pre>
+<p>&#x800C;&#x8FD9;&#x6761;rule&#x7684;&#x4F5C;&#x7528;&#x662F;&#x7528;OBJS&#x7684;&#x6240;&#x6709;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x751F;&#x6210;&#x5E93;&#x6587;&#x4EF6;&#xFF0C;ar&#x7528;&#x4E8E;&#x64CD;&#x4F5C;archive file&#xFF0C;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x9759;&#x6001;&#x94FE;&#x63A5;&#x5E93;.a&#x6587;&#x4EF6;&#xFF0C;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;.so&#x6587;&#x4EF6;&#x4E5F;&#x53C2;&#x8003;&#x4ED6;&#x7684;&#x505A;&#x6CD5;&#xFF0C;</p>
+<pre><code class="lang-makefile">python/familia.so : python/cpp/familia_wrapper.cpp familia
+    $(CXX) $(INCPATH) $(CXXFLAGS) -c $&lt; -o python/cpp/familia_wrapper.o
+    $(CXX) $(INCPATH) $(CXXFLAGS) -shared python/cpp/familia_wrapper.o $(LDFLAGS_SO) -l$(PYTHON_VERSION) -o $@
+</code></pre>
+<p>&#x9996;&#x5148;&#x7528;$&lt;&#x53D6;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;prerequisite&#xFF0C;&#x751F;&#x6210;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x7528;-shared&#x751F;&#x6210;$@&#x7684;.so&#x6587;&#x4EF6;&#x3002;</p>
+<p>-shared&#x7684;&#x4F5C;&#x7528;&#x5199;&#x5728;&#x4E0B;&#x9762;&#x4E86;&#x3002;</p>
+<hr>
+<h4 id="51-recipe-syntax">5.1 <a href="https://www.gnu.org/software/make/manual/make.html#Recipe-Syntax" target="_blank">Recipe Syntax</a></h4>
+<p>@echo&#xFF0C;echo&#x7528;&#x4E8E;&#x6253;&#x5370;&#x3001;&#x56DE;&#x663E;&#xFF0C;@&#x63A7;&#x5236;&#x547D;&#x4EE4;&#x4E0D;&#x5728;shell&#x91CC;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;</p>
+<p>@echo&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x628A;&#x5185;&#x5BB9;&#x8F93;&#x51FA;&#x5230;&#x522B;&#x7684;&#x5730;&#x65B9;&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x800C;&#x4E0D;&#x518D;shell&#x91CC;&#x663E;&#x793A;&#x3002;</p>
+<h4 id="72-syntax-of-conditionals">7.2 <a href="https://www.gnu.org/software/make/manual/make.html#Conditional-Syntax" target="_blank">Syntax of Conditionals</a></h4>
+<p>&#x4E0A;&#x9762;&#x5199;&#x8FC7;&#x4E86;&#x3002;</p>
+<h4 id="81-function-call-syntax">8.1 <a href="https://www.gnu.org/software/make/manual/make.html#Syntax-of-Functions" target="_blank">Function Call Syntax</a></h4>
+<pre><code class="lang-makefile">$(function arguments)
+or
+${function arguments}
+</code></pre>
+<p>&#x6BD4;&#x5982;&#xFF0C;</p>
+<pre><code class="lang-makefile">comma:= ,
+empty:=
+space:= <span class="hljs-variable">$(empty)</span> <span class="hljs-variable">$(empty)</span>
+foo:= a b c
+bar:= <span class="hljs-variable">$(subst $(space)</span>,<span class="hljs-variable">$(comma)</span>,<span class="hljs-variable">$(foo)</span>)
+<span class="hljs-comment"># bar is now &#x2018;a,b,c&#x2019;.</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;subst&#x662F;&#x7528;comma&#x66FF;&#x6362;foo&#x7684;&#x6BCF;&#x4E2A;space&#xFF0C;para3&#x4E2D;&#x7684;&#x6240;&#x6709;para1&#x88AB;para2&#x66FF;&#x6362;&#x3002;</p>
+<h4 id="97-summary-of-options">9.7 <a href="https://www.gnu.org/software/make/manual/make.html#Options-Summary" target="_blank">Summary of Options</a></h4>
+<p><strong>make&#x7684;&#x53C2;&#x6570;&#x3002;</strong></p>
+<h3 id="cxxflagsgcc-options&#x7B80;&#x8BB0;">CXXFLAGS(gcc options)&#x7B80;&#x8BB0;</h3>
+<p>familia+marisa&#x91CC;&#x9762;&#x7528;&#x5230;&#x7684;&#x8BB0;&#x5F55;&#x5728;&#x8FD9;&#x3002;</p>
+<h5 id="fpic-or--fpic">-fpic or -fPIC</h5>
+<p>&#x5728;&#x52A8;&#x6001;&#x5E93;&#x4E2D;&#x751F;&#x6210;&#x4F4D;&#x7F6E;&#x65E0;&#x5173;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;&#x5168;&#x5C40;&#x504F;&#x79FB;&#x8868;GOT(global offset table)&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x5E38;&#x91CF;&#x5730;&#x5740;&#x3002;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x65F6;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x89E3;&#x6790;GOT&#x6761;&#x76EE;&#x3002;<a href="https://gcc.gnu.org/onlinedocs/gcc/Code-Gen-Options.html" target="_blank">https://gcc.gnu.org/onlinedocs/gcc/Code-Gen-Options.html</a></p>
+<p>man gcc&#x67E5;&#x770B;manual&#xFF0C;/something&#x4E4B;&#x540E;&#x7528;n&#x548C;N&#x67E5;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x6216;&#x4E0A;&#x4E00;&#x4E2A;&#x3002;</p>
+<h5 id="pipe">-pipe</h5>
+<p>Use pipes rather than temporary files for communication between the various -Istages of compilation.  This fails to work on some systems where the assembler is unable to read from a pipe; but the GNU assembler has no trouble.</p>
+<p>&#x7F16;&#x8BD1;&#x4F18;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x52A0;&#x7684;&#x8BDD;/tmp&#x4E0B;&#x4F1A;&#x4EA7;&#x751F;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;.s&#x6C47;&#x7F16;&#x6587;&#x4EF6;&#x6216;.o&#xFF0C;&#x7528;&#x7BA1;&#x9053;&#x907F;&#x514D;&#x6587;&#x4EF6;IO&#x3002;</p>
+<h5 id="w">-W</h5>
+<p>man gcc&#x91CC;&#x7528;/-W$&#x641C;&#x4E0D;&#x5230;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x7528;&#xFF01;&#x76F8;&#x5BF9;&#x5730;&#xFF0C;-w&#x662F;&#x5173;&#x95ED;&#x7F16;&#x8BD1;warning&#x3002;</p>
+<h5 id="wall">-Wall</h5>
+<p>Turns on all optional warnings which are desirable for normal code.  At present this is -Wcomment, -Wtrigraphs, -Wmultichar and a warning about integer promotion causing a change of sign in &quot;#if&quot; expressions.  Note that many of the preprocessor&apos;s warnings are on by default and have no options to control them.</p>
+<p>&#x5F00;&#x542F;&#x6240;&#x6709;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x4EE3;&#x7801;&#x9700;&#x8981;&#x7684;warnings&#x3002;</p>
+<h5 id="stdc11">-std=c++11</h5>
+<p>Determine the language standard.   This option is currently only supported when compiling C or C++. The compiler can accept several base standards.</p>
+<p>c90, c89, iso9899:1990, c9x, c11, c1x, gnu90, gnu89, gnu99, gnu9x, gnu11, gnu1x, c++98, c++03, gnu++98, gnu++03, c++11, c++0x, gnu++11, gnu++0x, c++1y, gnu++1y</p>
+<h5 id="fno-omit-frame-pointer">-fno-omit-frame-pointer</h5>
+<p>-O, -O2, -O3, -Os&#x7F16;&#x8BD1;&#x4F18;&#x5316;&#x4F1A;&#x5F00;&#x542F;-fomit-frame-pointer&#xFF0C;&#x9700;&#x8981;&#x7528;-fno-&#x5173;&#x6389;&#x3002;</p>
+<blockquote>
+<p>frame pointer&#x6307;&#x5411;&#x672C;&#x51FD;&#x6570;&#x6808;&#x5E27;&#x9876;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x672C;&#x51FD;&#x6570;&#x5728;&#x8FDB;&#x7A0B;&#x6808;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6709;&#x4E13;&#x95E8;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x4FDD;&#x5B58;&#x8BE5;&#x503C;&#x3002;&#x4E3B;&#x8981;&#x662F;backtrace&#x7528;&#xFF0C;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;frame pointer&#x4FDD;&#x5B58;&#x5728;&#x5176;&#x540E;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x7684;&#x6808;&#x5E27;&#x4E2D;&#x3002; &#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x8C03;&#x7528;&#x5C42;&#x7EA7;&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x6808;&#x5E27;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x51FA;back trace&#x3002;</p>
+</blockquote>
+<h5 id="fpermissive">-fpermissive</h5>
+<p>Downgrade some diagnostics about nonconformant code from errors to warnings.  Thus, using -fpermissive allows some nonconforming code to compile.</p>
+<p>&#x5C06;&#x4E00;&#x4E9B;&#x5173;&#x4E8E;&#x4E0D;&#x5408;&#x683C;&#x4EE3;&#x7801;&#x7684;&#x8BCA;&#x65AD;&#x4ECE;&#x9519;&#x8BEF;&#x964D;&#x7EA7;&#x4E3A;&#x8B66;&#x544A;&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x4F7F;&#x7528; -fpermissive &#x5141;&#x8BB8;&#x7F16;&#x8BD1;&#x4E00;&#x4E9B;&#x4E0D;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x611F;&#x89C9;&#x8FD8;&#x633A;&#x6709;&#x7528;&#xFF1F;</p>
+<h5 id="o3">-O3</h5>
+<p>Optimization Option&#xFF0C;-O  -O0  -O1  -O2  -O3  -Os -Ofast -Og&#x3002;</p>
+<p>Optimize yet more.  -O3 turns on all optimizations specified by -O2 and also turns on the -finline-functions, -funswitch-loops, -fpredictive-commoning, -fgcse-after-reload, -ftree-vectorize, -fvect-cost-model, -ftree-partial-pre and -fipa-cp-clone options.</p>
+<p>&#x9664;&#x4E86;&#x5F00;&#x542F;O2&#x7684;&#x4F18;&#x5316;&#x5916;&#x8FD8;&#x5F00;&#x542F;&#x540E;&#x9762;&#x8FD9;&#x4E9B;&#x7F16;&#x8BD1;&#x4F18;&#x5316;&#x3002;</p>
+<h5 id="ffast-math">-ffast-math</h5>
+<p>Sets -fno-math-errno, -funsafe-math-optimizations, -ffinite-math-only, -fno-rounding-math, -fno-signaling-nans and -fcx-limited-range. This option causes the preprocessor macro &quot;__FAST<em>MATH\</em>_&quot; to be defined. This option is not turned on by any -O option besides -Ofast since it can result in incorrect output for programs that depend on an exact implementation of IEEE or ISO rules/specifications for math functions. It may, however, yield faster code for programs that do not require the guarantees of these specifications.</p>
+<p>&#x5B9A;&#x4E49;fast math&#x90A3;&#x4E2A;&#x9884;&#x5904;&#x7406;&#x5668;&#x5B8F;&#xFF0C;&#x7406;&#x89E3;&#x7684;&#x662F;&#x964D;&#x4F4E;&#x7CBE;&#x5EA6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x7CBE;&#x786E;&#x5B9E;&#x73B0;&#x7684;&#x4EE3;&#x7801;&#x8F93;&#x51FA;&#x9519;&#x8BEF;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x6570;&#x5B66;&#x51FD;&#x6570;&#x7684;IEEE/ISO&#x89C4;&#x8303;&#xFF0C;&#x5F00;&#x542F;&#x4F1A;&#x4EA7;&#x751F;&#x66F4;&#x5FEB;&#x4EE3;&#x7801;&#x3002;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x663E;&#x7136;&#x5B8C;&#x5168;&#x4E0D;&#x9700;&#x8981;&#xFF0C;&#x91C7;&#x6837;&#x7528;&#x7684;&#x5168;&#x662F;INT&#xFF0C;&#x6700;&#x540E;&#x63A8;&#x7406;&#x7B97;&#x5206;&#x5E03;&#x7528;&#x7684;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x7CBE;&#x5EA6;&#x5F88;&#x9AD8;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x53EA;&#x6709;-Ofast&#x4F1A;&#x6253;&#x5F00;&#x3002;</p>
+<h5 id="pthread">-pthread</h5>
+<p>This is a synonym for -<strong>pthreads</strong>. &#x5373;-pthread&#x548C;-pthreads&#x540C;&#x4E49;&#x3002;</p>
+<p>Add support for multithreading using the POSIX threads library.  This option sets flags for both the preprocessor and linker.  This option does not affect the thread safety of object code produced  by the compiler or that of libraries supplied with it.</p>
+<p>&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x589E;&#x52A0;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x652F;&#x6301;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x540C;&#x65F6;&#x5BF9;&#x201C;&#x9884;&#x5904;&#x7406;&#x5668;&#x201D;&#x548C;&#x201C;&#x94FE;&#x63A5;&#x5668;&#x201D;&#x4EA7;&#x751F;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x4E0D;&#x5F71;&#x54CD;&#x7F16;&#x8BD1;&#x5668;&#x4EA7;&#x751F;&#x7684;&#x76EE;&#x6807;&#x4EE3;&#x7801;&#x7684;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x6216;&#x4EE3;&#x7801;&#x91CC;&#x7528;&#x5230;&#x7684;&#x591A;&#x7EBF;&#x7A0B;&#x5E93;&#x7684;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
+<p>man gcc&#x5DF2;&#x7ECF;&#x627E;&#x4E0D;&#x5230;-lpthread&#x5C31;&#x8BF4;&#x660E;&#x5F03;&#x7528;&#x4E86;&#xFF0C;&#x5FD8;&#x4E86;&#x4ED6;&#x5427;&#x3002;</p>
+<h5 id="i-dir">-I <u>dir</u></h5>
+<p>Add the directory dir to the list of directories to be searched for header files. Directories named by -I are searched before the standard system include directories.  If the directory dir is a standard system include directory, the option is ignored to ensure that the default search order for system directories and the special treatment of system headers are not defeated .  If dir begins with &quot;=&quot;, then the &quot;=&quot; will be replaced by the sysroot prefix; see --sysroot and -isysroot.</p>
+<p>&#x8DDF;&#x4E0A;&#x9762;3.3 Including Other Makefiles&#x7684;-I&#x522B;&#x641E;&#x6DF7;&#x3002;</p>
+<p>&#x7528;-I&#x5C06;dir&#x6DFB;&#x52A0;&#x5230;&#x641C;&#x7D22;&#x7684;<strong>&#x5934;&#x6587;&#x4EF6;</strong>&#x8DEF;&#x5F84;&#x5217;&#x8868;&#x91CC;&#xFF0C;&#x5982;&#x679C;dir&#x8DEF;&#x5F84;&#x662F;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x5F15;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#x5219;&#x88AB;&#x5FFD;&#x7565;&#x4EE5;&#x9632;&#x5BF9;&#x7CFB;&#x7EDF;&#x5934;&#x6587;&#x4EF6;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x88AB;&#x7834;&#x574F;&#x3002;&#x5982;&#x679C;dir&#x4EE5;&apos;=&apos;&#x4E3A;&#x524D;&#x7F00;&#x5219;&#x81EA;&#x52A8;&#x66FF;&#x6362;&#x4E3A;sysroot prefix&#x3002;</p>
+<h5 id="idir">-I<u>dir</u></h5>
+<blockquote>
+<p>Add the directory dir to the head of the list of directories to be searched for header files.  This can be used to override a system header file, substituting your own version, since these directories are searched before the system header file directories.  However, you should not use this option to add directories that contain vendor-supplied system header files (use -isystem for that).  If you use more than one -I option, the directories are scanned in left-to-right order; the standard system directories come after. </p>
+<p>If a standard system include directory, or a directory specified with -isystem, is also specified with -I, the -I option is ignored.  The directory is still searched but as a system directory at its normal position in the system include chain.  This is to ensure that GCC&apos;s procedure to fix buggy system headers and the ordering for the &quot;include_next&quot; directive are not inadvertently changed.  If you really need to change the search order for system directories, use the -nostdinc and/or -isystem options.</p>
+</blockquote>
+<p>&#x8FD9;&#x4E2A;&#x53EF;&#x7528;&#x4E8E;&#x8986;&#x76D6;&#x7CFB;&#x7EDF;&#x5934;&#x6587;&#x4EF6;&#xFF1F;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#x626B;&#x63CF;&#xFF0C;&#x597D;&#x50CF;&#x8DDF;&#x4E0A;&#x9762;&#x6CA1;&#x533A;&#x522B;&#x554A;&#x3002;</p>
+<h5 id="ldir">-L<u>dir</u></h5>
+<p>Add directory dir to the list of directories to be searched for -l.</p>
+<h6 id="&#x6CE8;&#x610F;1&#x8FD9;&#x91CC;&#x662F;l&#x4E0A;&#x9762;&#x662F;i&#xFF1B;2&#x8FD9;&#x4FE9;&#x8DDF;dir&#x6216;&#x8005;library&#x8FDE;&#x7740;&#x7684;&#x65F6;&#x5019;&#x6CE8;&#x610F;&#x6709;&#x65E0;&#x7A7A;&#x683C;&#xFF0C;&#x4E0D;&#x52A0;&#x7A7A;&#x683C;&#x4F3C;&#x4E4E;&#x603B;&#x662F;&#x5BF9;&#x7684;&#x3002;">&#x6CE8;&#x610F;1.&#x8FD9;&#x91CC;&#x662F;L&#x4E0A;&#x9762;&#x662F;i&#xFF1B;2.&#x8FD9;&#x4FE9;&#x8DDF;dir&#x6216;&#x8005;library&#x8FDE;&#x7740;&#x7684;&#x65F6;&#x5019;&#x6CE8;&#x610F;&#x6709;&#x65E0;&#x7A7A;&#x683C;&#xFF0C;&#x4E0D;&#x52A0;&#x7A7A;&#x683C;&#x4F3C;&#x4E4E;&#x603B;&#x662F;&#x5BF9;&#x7684;&#x3002;</h6>
+<blockquote>
+<p>-l<u>library</u> or -I <u>library</u>&#xFF0C;Search the library named library when linking.  (The second alternative with the library as a separate argument is only for POSIX compliance and is not recommended.) It makes a difference where in the command you write this option; the linker searches and processes libraries and object files in the order they are specified.  Thus, foo.o -lz bar.o searches library z after file foo.o but before bar.o.  If bar.o refers to functions in z, those functions may not be loaded. The linker searches a standard list of directories for the library, which is actually a file named liblibrary.a.  The linker then uses this file as if it had been specified precisely by name. The directories searched include several standard system directories plus any that you specify with -L. Normally the files found this way are library files---archive files whose members are object files.  The linker handles an archive file by scanning through it for members which define symbols that have so far been referenced but not defined.  But if the file that is found is an ordinary object file, it is linked in the usual fashion.  The only difference between using an -l option and specifying a file name is that -l surrounds library with lib and .a and searches several directories.</p>
+</blockquote>
+<p>&#x94FE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x641C;&#x7D22;&#x540D;&#x4E3A;library&#x7684;&#x5E93;&#x3002;&#xFF08;<strong>&#x52A0;&#x7A7A;&#x683C;&#x7684;&#x7B2C;&#x4E8C;&#x79CD;&#x5F62;&#x5F0F;&#x4EC5;&#x7528;&#x4E8E; POSIX &#x5408;&#x89C4;&#x6027;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#xFF01;</strong>&#xFF09;</p>
+<p>&#x8981;&#x6309;&#x987A;&#x5E8F;&#xFF0C;&#x4E0D;&#x77E5;&#x4E3A;&#x5565;&#xFF08;&#x4F30;&#x8BA1;&#x8DDF;&#x7F16;&#x8BD1;&#x539F;&#x7406;&#x76F8;&#x5173;&#xFF09;&#xFF0C;&#x4F3C;&#x4E4E;&#x4E00;&#x822C;&#x653E;&#x5728;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E4B;&#x540E;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x628A;xxx.a&#x6216;&#x8005;xxx.so&#x6587;&#x4EF6;&#x653E;&#x8FDB;/usr/lib&#xFF08;sudo&#x6743;&#x9650;&#xFF09;/usr/local/lib&#xFF08;&#x4E00;&#x822C;&#x6743;&#x9650;&#xFF09;&#x4E4B;&#x7C7B;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x94FE;&#x63A5;&#x65F6;&#x7528;-l&#x6216;-Llibxxx.a&#x6216;libxxx.so&#x5F15;&#x5165;&#x3002;</p>
+<p>&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x8FD8;&#x662F;make&#x65F6;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x5230;&#x9879;&#x76EE;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x7136;&#x540E;export LD_LIBRARY_PATH=./third_party/lib:$LD_LIBRARY_PATH&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x66FF;&#x6362;&#x5176;&#x4E2D;&#x9879;&#x76EE;&#x8DEF;&#x5F84;&#x7684;./third_party/lib&#x3002;</p>
+<h5 id="c-file">-c <u>file</u></h5>
+<p>-c &#x751F;&#x6210;.o&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF0C;-S &#x751F;&#x6210;.s&#x6C47;&#x7F16;&#x6587;&#x4EF6;&#x3002;</p>
+<h5 id="o-file">-o <u>file</u></h5>
+<p>Write output to file.  This is the same as specifying file as the second non-option argument to cpp.  gcc has a different interpretation of a second non-option argument, so you must use -o to specify the output file.</p>
+<p>&#x5C06;&#x8F93;&#x51FA;&#x5199;&#x5165;file&#x3002;</p>
+<h5 id="m">-M</h5>
+<blockquote>
+<p>Instead of outputting the result of preprocessing, output a rule suitable for make describing the dependencies of the main source file.  The preprocessor outputs one make rule containing the object file name for that source file, a colon, and the names of all the included files, including those coming from -include or -imacros command line options.</p>
+<p>Unless specified explicitly (with -MT or -MQ), the object file name consists of the name of the source file with any suffix replaced with object file suffix and with any leading directory parts removed.  If there are many included files then the rule is split into several lines using -newline.  The rule has no commands.</p>
+<p>This option does not suppress the preprocessor&apos;s debug output, such as -dM.  To avoid mixing such debug output with the dependency rules you should explicitly specify the dependency output file with -MF, or use an environment variable like DEPENDENCIES_OUTPUT.  Debug output will still be sent to the regular output stream as normal.</p>
+<p>Passing -M to the driver implies -E, and suppresses warnings with an implicit -w.</p>
+</blockquote>
+<p>&#x4E0D;&#x8F93;&#x51FA;&#x4E0E;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x800C;&#x662F;&#x8F93;&#x51FA;&#xFF08;&#x5982;&#x5230;shell&#xFF09;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x5F53;&#x524D;make&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x7684;&#x89C4;&#x5219;&#x3002;&#x9884;&#x7F16;&#x8BD1;&#x5668;&#x8F93;&#x51FA;&#x8FD9;&#x4E2A;make&#x89C4;&#x5219;&#x5305;&#x542B;&#x540D;&#x5B57;&#x8DDF;&#x6E90;&#x6587;&#x4EF6;&#x76F8;&#x540C;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF0C;&#x5192;&#x53F7;&#xFF0C;&#x548C;&#x6240;&#x6709;&#x88AB;&#x5F15;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x6BD4;&#x5982;<code>$ gcc -M main.c</code> &#x4E4B;&#x540E;&#xFF0C;&#x8F93;&#x51FA;<code>main.o: main.c /usr/include/stdc-predef.h /usr/include/stdio.h</code>&#x3002;</p>
+<h5 id="mf-file">-MF <u>file</u></h5>
+<p>&#x5C06;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x5199;&#x5230;file&#x91CC;&#x3002;</p>
+<h5 id="mm">-MM</h5>
+<p>&#x4E0E;-M&#x76F8;&#x4F3C;&#xFF0C;&#x53EA;&#x662F;&#x4E0D;&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x5934;&#x6587;&#x4EF6;&#x3002;</p>
+<h5 id="mt-target">-MT <u>target</u></h5>
+<p>&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x540D;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;main.o&#xFF1F;</p>
+<h5 id="shared">-shared</h5>
+<blockquote>
+<p>Produce a shared object which can then be linked with other objects to form an executable.  Not all systems support this option.  For predictable results, you must also specify the same set of options used for compilation(-fpic, -fPIC, or model suboptions) when you specify this linker option.</p>
+</blockquote>
+<p>&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x4E0E;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x94FE;&#x63A5;&#x4EE5;&#x5F62;&#x6210;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002; &#x5E76;&#x975E;&#x6240;&#x6709;&#x7CFB;&#x7EDF;&#x90FD;&#x652F;&#x6301;&#x6B64;&#x9009;&#x9879;&#x3002; &#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x53EF;&#x9884;&#x6D4B;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x8FD8;&#x5FC5;&#x987B;&#x5728;&#x6307;&#x5B9A;&#x6B64;&#x94FE;&#x63A5;&#x5668;&#x9009;&#x9879;&#x65F6;&#x6307;&#x5B9A;&#x7528;&#x4E8E;&#x7F16;&#x8BD1;&#x7684;&#x540C;&#x4E00;&#x7EC4;&#x9009;&#x9879;&#xFF08;-fpic&#x3001;-fPIC &#x6216;&#x5B50;&#x9009;&#x9879;&#xFF09;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Algorithm/Pack.md" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Pack">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Make","level":"1.3","depth":1,"previous":{"title":"Pack","level":"1.2.2","depth":2,"path":"Algorithm/Pack.md","ref":"Algorithm/Pack.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Make.md","mtime":"2022-06-30T17:07:46.072Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-30T17:08:39.287Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
